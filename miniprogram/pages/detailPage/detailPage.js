@@ -29,7 +29,7 @@ Page({
   },
 
   showCommentChoice() {
-    db.checkCollection('comment',this.data.filmDetail._id).then(res=>{
+    db.checkCollection(this.data.filmDetail._id).then(res=>{
       if (!res.data[0]) {
         util.showCommentChoice(this.data.filmDetail)
       } else {
