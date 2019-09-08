@@ -51,10 +51,8 @@ setList(listType){
     db.getCommentByUser('favorite').then(res => {
       var favorite = res.data
       this.favComment = []
-      console.log(res.data)
       for (var index in favorite ){
         db.getCollection('comment',favorite[index].commentId).then(res=>{
-          console.log(res.data)
           var comments = res.data
           for (var index in comments) {
             var filmId = comments[index].filmId
