@@ -1,0 +1,37 @@
+<!--pages/commentEditor/commentEditor.wxml-->
+<view class='login' wx:if="{{!login}}">
+  <view class="loginWrapper">
+    <view class="loginAvatar"></view>
+    <view class="loginInfo">
+      <view class="loginStatus">未登录</view>
+      <view class="loginTips">点击微信登陆后方可使用影评功能</view>
+    </view>
+  </view>
+  <button class="loginBtn" open-type="getUserInfo" bindgetuserinfo="onTapLogin">微信登陆</button>
+</view>
+<!--登陆后-->
+<view wx:else>
+  <image class="poster" src="{{filmDetail.poster}}" mode="widthFix"></image>
+  <view class="textWrapper">
+    <view class="name">{{filmDetail.name}}</view>
+    <form wx:if="{{type==0}}" bindsubmit="submitComment">
+      <textarea class="textArea" placeholder-class="placeholder" placeholder="请输入你的影评内容..." maxlength="255" name='textarea'></textarea>
+      <button class="submitBtn btn" form-type='submit'>提交</button>
+    </form>
+    <!--录音-->
+    <view wx:elif="{{type==1}}" class="record">
+      <view class="recordWrapper">
+      <view class="recordBtn" style="{{recording}}">
+        <image src="../../images/record_icon.png" mode='widthFix' class="recordIcon"></image>
+        <view class="recordText" bindtouchstart="startRecord" bindtouchend="endRecord">长按录音</view>
+      </view>
+      <view class="recordPreview" wx:if="{{duration}}">
+        <image class="playIcon" src="../../images/play_icon.png" mode='widthFix' bindtap="playRecord" wx:if="{{!onPlay}}"></image>
+        <image class="playIcon" src="../../images/stop_icon.png" mode='widthFix' bindtap="stopPlaying" wx:else></image>
+        <view class="duration">{{duration}}s</view>
+      </view>
+    </view>
+    <view class="submitBtn btn" bindtap="submitComment">提交</view>
+  </view>
+</view>
+</view>

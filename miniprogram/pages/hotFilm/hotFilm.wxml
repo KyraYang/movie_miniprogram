@@ -1,0 +1,11 @@
+<!--pages/hotFilm/hotFilm.wxml-->
+<view class='hotFilmWrapper'>
+  <view class="hotFilmList" wx:for="{{filmData}}" wx:key="_id" bindtap="onTapDetailPage" data-id="{{index}}">
+    <image class="poster" src="{{item.poster}}" mode="widthFix"></image>
+    <view class='detail'>
+      <view class='name'>{{item.name}}</view>
+      <view class='director'>导演：{{item.director}}</view>
+      <view class="type">类型：{{item.type}}</view>
+    </view>
+  </view>
+</view>

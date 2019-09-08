@@ -1,0 +1,44 @@
+<!--pages/personal/personal.wxml-->
+<view class='login' wx:if="{{!userInfo}}">
+  <view class="loginWrapper">
+    <view class="loginAvatar"></view>
+    <view class="loginInfo">
+      <view class="loginStatus">未登录</view>
+      <view class="loginTips">点击微信登陆后方可使用影评功能</view>
+    </view>
+  </view>
+  <button class="loginBtn" open-type="getUserInfo" bindgetuserinfo="onTapLogin">微信登陆</button>
+</view>
+<!--登陆后--->
+
+<view class="personalComment" wx:else>
+  <view class="personalInfo">
+    <image class="personalAvatar" src="{{userInfo.avatarUrl}}"mode="widthFix"></image>
+    <view class="userName">{{userInfo.nickName}}</view>
+    <view class="btnWrapper">
+      <view class="myComments" bindtap="switchBtn" style="{{style1}}">发布的影评</view>
+      <view class="collectedComments" bindtap="switchBtn"style="{{style2}}">收藏的影评</view>
+    </view>
+    <view class="comments">
+      <view class="commentList" wx:for="{{comments}}" wx:key="_id" bindtap="onTapDetailPage" data-id="{{index}}">
+        <image class="poster" src="{{item.poster}}" mode="widthFix"></image>
+        <view class='detail'>
+          <view class='name'>{{item.name}}</view>
+          <view class='comment'>
+            <view class="commentText" wx:if="{{item.type==0}}"><text>{{item.comment}}</text></view>
+            <view wx:if="{{item.type == 1}}" class="record">
+              <view class="recordWrapper">
+                <view class="recordPreview">
+                  <image class="playIcon" src="../../images/play_icon.png" mode='widthFix' bindtap="playRecord" wx:if="{{!item.onPlay}}"></image>
+                  <image class="playIcon" src="../../images/stop_icon.png" mode='widthFix' bindtap="stopPlaying" wx:else></image>
+                  <view class="duration">{{item.duration}}s</view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="userInfo"><image class="commentAvatar" src="{{item.avatar}}" mode="widthFix"></image><view class="commentUserName">{{item.username}}</view></view>
+        </view>
+      </view></view>
+      <view class="backHome" bindtap="onTapHome">返回首页</view>
+    
+  </view></view>

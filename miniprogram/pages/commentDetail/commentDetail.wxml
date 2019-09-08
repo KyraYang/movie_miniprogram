@@ -1,0 +1,37 @@
+<!--pages/commentDetail/commentDetail.wxml-->
+<view class='login' wx:if="{{!login}}">
+  <view class="loginWrapper">
+    <view class="loginAvatar"></view>
+    <view class="loginInfo">
+      <view class="loginStatus">未登录</view>
+      <view class="loginTips">点击微信登陆后方可使用影评功能</view>
+    </view>
+  </view>
+  <button class="loginBtn" open-type="getUserInfo" bindgetuserinfo="onTapLogin">微信登陆</button>
+</view>
+
+<view wx:else>
+<image class="poster" src="{{filmDetail.poster}}" mode="widthFix"></image>
+
+<view class="textWrapper">
+  <view class="name">{{filmDetail.name}}</view>
+  <view class="personalInfo">
+    <image class="avatar" src="{{comment.avatar}}"></image>
+    <view class="userName">{{comment.username}}的影评</view>
+  </view>
+  <view wx:if="{{comment.type == 0}}" class="commentText"><scroll-view scroll-y style="height:400rpx">{{comment.comment}}</scroll-view></view>
+  <view wx:if="{{comment.type == 1}}" class="record">
+    <view class="recordWrapper">
+      <view class="recordPreview">
+        <image class="playIcon" src="../../images/play_icon.png" mode='widthFix' bindtap="playRecord" wx:if="{{!onPlay}}"></image>
+        <image class="playIcon" src="../../images/stop_icon.png" mode='widthFix' bindtap="stopPlaying" wx:else></image>
+        <view class="duration">{{comment.duration}}s</view>
+      </view>
+    </view>
+  </view>
+  <view class="commentWrapper">
+    <view class="favComment btn" bindtap="onTapFav">收藏影评</view>
+    <view class="editComment btn" bindtap="showCommentChoice" wx:if="{{edit}}">修改影评</view>
+    <view class="editComment btn" bindtap="writeComment" wx:else>写影评</view>
+  </view></view>
+  </view>

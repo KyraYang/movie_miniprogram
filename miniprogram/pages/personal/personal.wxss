@@ -1,0 +1,165 @@
+/* pages/personal/personal.wxss */
+
+
+/*登陆后页面*/
+
+.personalComment {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin: 30rpx 30rpx;
+}
+
+.personalInfo {
+  width: 100%;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.personalAvatar {
+  height: 110rpx;
+  width: 110rpx;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-bottom: 20rpx;
+}
+
+.userName {
+  color: rgb(152, 169, 187);
+}
+.btnWrapper{
+  display: flex;
+  flex-direction: row;
+  margin: 20rpx 30rpx;
+  width: 100%;
+  border-bottom: 1px solid gainsboro
+}
+.myComments,
+.collectedComments{
+  margin: auto;
+  color: rgb(152, 169, 187);
+  font-size: 13px;
+  height: 50rpx;
+  line-height: 50rpx
+}
+
+.backHome{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+    height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: rgb(152, 169, 187);
+  font-weight: bold;
+  background: rgb(255, 255, 255);
+}
+.commentList{
+  display: flex;
+  flex-direction: row;
+  margin: 40rpx 30rpx;
+  border: 1px solid gainsboro;
+  background-color: white;
+  height: 350rpx;
+  align-items: center;
+  justify-content: center;
+}
+.poster{
+width: 220rpx;
+margin-right: 40rpx
+}
+.detail{
+  display: flex;
+  flex-direction: column;
+  width: 370rpx;
+  height: 70%;
+  justify-content: center;
+}
+.name{
+  margin-top: 10rpx;
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
+.commentText{
+    height: 150rpx;
+    font-size: 13px;
+    margin-right: 10rpx;
+}
+text{
+  width: 350rpx;
+  max-width: 350rpx;
+  /* 控制显示的行数 */
+  max-height:150rpx;
+  line-height: 35rpx;
+  /* 显示多行 */
+  display:-webkit-box; 
+  overflow:hidden; 
+  /* 5为显示的行数 */
+  -webkit-line-clamp:4;
+  -webkit-box-orient:vertical;
+  font-size: 13px
+}
+.recordPreview {
+  display: flex;
+  flex-direction: row;
+  margin: 30rpx auto;
+  margin-bottom: 30rpx;
+  width: 70%;
+  border: 1px solid rgb(152, 169, 187);
+  align-content: center;
+  height: 200rpx;
+  border-radius: 5px;
+  background-color: rgb(247, 249, 251, 0.836);
+}
+
+.recordText,
+.duration {
+  font-size: 35rpx;
+  color: rgb(133, 150, 168);
+  margin: auto;
+  margin-left: 0;
+}
+
+.record {
+  display: flex;
+  flex-direction: column;
+}
+
+.recordPreview{
+  height: 70rpx;
+}
+.playIcon {
+  width: 50rpx;
+  margin: auto;
+  margin-left: 20rpx;
+  margin-right: 40rpx
+}
+.userInfo{
+  width: 95%;
+margin-top: 20rpx;
+margin-bottom: 10rpx;
+  display: flex;
+  flex-direction: row;
+}
+.commentUserName{
+  color: rgb(99, 103, 107);
+  font-size: 11px;
+  margin: auto;
+  margin-left: 0
+}
+.commentAvatar {
+  height: 90rpx;
+  width: 90rpx;
+  border-radius: 50%;
+  border: 2px solid white;
+margin-right: 5rpx
+}

@@ -1,0 +1,52 @@
+/* pages/detailPage/detailPage.wxss */
+
+.poster {
+  position: absolute;
+  top: 50rpx;
+  left: 230rpx;
+  width: 40%;
+  z-index: 1;
+}
+
+.textWrapper {
+  position: absolute;
+  top: 130rpx;
+  border: 1px solid gainsboro;
+  background-color: white;
+  z-index: 0;
+  margin: 20rpx 35rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  margin-top: 390rpx;
+  font-size: 22px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+  text-align: center;
+}
+
+.summary {
+  display: block;
+  margin: 0 50rpx;
+  text-align: justify;
+  font-size: 13px;
+  color: rgba(90, 90, 90, 0.788);
+  word-spacing: 5rpx;
+}
+
+.commentWrapper {
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  bottom: 20rpx;
+  flex-direction: row;
+  display: flex;
+  height: 100rpx;
+  width: 100%;
+}
+.addComment,
+.viewComment{
+  margin: auto;
+}

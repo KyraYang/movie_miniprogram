@@ -1,0 +1,85 @@
+/* pages/comments/comments.wxss */
+.commentsList{
+  display: flex;
+  flex-direction: column;
+  margin: 40rpx 30rpx;
+  border: 1px solid gainsboro;
+  background-color: white;
+  height: 300rpx;
+  align-items: center;
+  justify-content: center;
+}
+
+.personalInfo{
+  width: 90%;
+margin-top: 20rpx;
+margin-bottom: 10rpx;
+  display: flex;
+  flex-direction: row;
+}
+.userName{
+  color: rgb(99, 103, 107);
+  font-size: 13px;
+  margin: auto;
+  margin-left: 0
+}
+.avatar {
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+  border: 2px solid white;
+margin-right: 5rpx
+}
+.commentText{
+    height: 150rpx;
+}
+text{
+  width: 600rpx;
+  max-width: 600rpx;
+  /* 控制显示的行数 */
+  max-height:150rpx;
+  line-height: 35rpx;
+  /* 显示多行 */
+  display:-webkit-box; 
+  overflow:hidden; 
+  /* 5为显示的行数 */
+  -webkit-line-clamp:4;
+  -webkit-box-orient:vertical;
+  font-size: 13px
+}
+.recordPreview {
+  display: flex;
+  flex-direction: row;
+  margin: 30rpx auto;
+  margin-bottom: 30rpx;
+  width: 40%;
+  border: 1px solid rgb(152, 169, 187);
+  align-content: center;
+  height: 200rpx;
+  border-radius: 5px;
+  background-color: rgb(247, 249, 251, 0.836);
+}
+
+.recordText,
+.duration {
+  font-size: 35rpx;
+  color: rgb(133, 150, 168);
+  margin: auto;
+  margin-left: 0;
+}
+
+.record {
+  width: 700rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.recordPreview{
+  height: 70rpx;
+}
+.playIcon {
+  width: 50rpx;
+  margin: auto;
+  margin-left: 20rpx;
+  margin-right: 40rpx
+}

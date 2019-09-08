@@ -1,0 +1,90 @@
+/* pages/commentEditor/commentEditor.wxss */
+
+.poster {
+  position: absolute;
+  top: 50rpx;
+  left: 230rpx;
+  width: 40%;
+  z-index: 1;
+}
+
+.textWrapper {
+  margin: 20rpx 35rpx;
+  margin-top: 130rpx;
+  border: 1px solid gainsboro;
+  background-color: white;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  height: 1000rpx;
+}
+
+.name {
+  margin-top: 390rpx;
+  font-size: 22px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+  text-align: center;
+}
+
+.textArea {
+  margin: 20rpx 40rpx;
+  width: 90%;
+  background-color: rgb(247, 249, 251, 0.836);
+}
+
+.placeholder {
+  font-size: 13px;
+}
+
+.submitBtn {
+  margin: auto;
+}
+.recordWrapper{
+  height: 260rpx
+}
+
+.recordIcon {
+  width: 50rpx;
+  margin: auto;
+  margin-right: 0;
+}
+
+.recordBtn,
+.recordPreview {
+  display: flex;
+  flex-direction: row;
+  margin: 30rpx auto;
+  margin-bottom: 30rpx;
+  width: 40%;
+  border: 1px solid rgb(152, 169, 187);
+  align-content: center;
+  height: 100rpx;
+  border-radius: 5px;
+  background-color: rgb(247, 249, 251, 0.836);
+}
+
+.recordText,
+.duration {
+  font-size: 35rpx;
+  color: rgb(133, 150, 168);
+  margin: auto;
+  margin-left: 0;
+}
+
+.record {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.recordPreview{
+  height: 70rpx;
+}
+.playIcon {
+  width: 50rpx;
+  margin: auto;
+  margin-left: 20rpx;
+  margin-right: 40rpx
+}

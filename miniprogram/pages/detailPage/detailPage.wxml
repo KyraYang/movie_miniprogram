@@ -1,0 +1,12 @@
+
+  <image class="poster" src="{{filmDetail.poster}}" mode="widthFix"></image>
+  <view class="textWrapper">
+    <view class="name">{{filmDetail.name}}</view>
+    <view class="summary">
+      <text>{{summary}}</text>
+    </view>
+    <view class="commentWrapper">
+      <view class="viewComment btn" bindtap="onTapComments">查看影评</view>
+      <view class="addComment btn" bindtap="showCommentChoice">添加影评</view>
+    </view>
+  </view>

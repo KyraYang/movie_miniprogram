@@ -1,0 +1,22 @@
+<!--pages/comments/comments.wxml-->
+<view class='commentsWrapper'>
+  <view class="commentsList" wx:for="{{comments}}" wx:key="_id" bindtap="onTapDetailPage" data-id="{{index}}">
+    <view class="personalInfo">
+      <image class="avatar" src="{{item.avatar}}" mode="widthFix"></image>
+      <view class="userName">{{item.username}}</view>
+    </view>
+    <view class='detail'>
+      <view wx:if="{{item.type == 0}}" class="commentText"><text>{{item.comment}}</text></view>
+      <view wx:if="{{item.type == 1}}" class="record">
+        <view class="recordWrapper">
+          <view class="recordPreview">
+            <image class="playIcon" src="../../images/play_icon.png" mode='widthFix' bindtap="playRecord" wx:if="{{!item.onPlay}}"></image>
+            <image class="playIcon" src="../../images/stop_icon.png" mode='widthFix' bindtap="stopPlaying" wx:else></image>
+            <view class="duration">{{item.duration}}s</view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>

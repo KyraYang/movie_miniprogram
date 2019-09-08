@@ -1,0 +1,67 @@
+/* miniprogram/pages/home/home.wxss */
+.filmDetail{
+position: relative;
+align-items: center;
+margin: 30rpx 50rpx 0;
+align-content: center;
+display: flex;
+flex-direction: column;
+height: 900rpx;
+justify-content: center;
+}
+.poster{
+  width: 90%;
+  height: 80%;
+  align-content: center;
+}
+.name{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 70rpx;
+  font-size: 40rpx;
+  margin-top: 15rpx;
+  color: rgb(116, 116, 116)
+}
+.comment{
+  display: flex;
+  flex-direction: row;
+  margin: 20rpx 10rpx;
+  align-items: center;
+}
+.userName{
+  color: rgb(99, 103, 107);
+  margin: auto;
+  width: 60%;
+  margin-left: 0;
+  font-size: 12px
+}
+.avatar {
+  margin: auto;
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+  border: 2px solid white;
+margin-right: 30rpx;
+}
+.bottomButton {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+}
+
+.hotFilm,
+.personalPage{
+  flex: 1;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: rgb(152, 169, 187);
+  font-weight: bold;
+  background: rgb(255, 255, 255);
+}
+

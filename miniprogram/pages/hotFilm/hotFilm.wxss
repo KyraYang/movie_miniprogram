@@ -1,0 +1,34 @@
+/* pages/hotFilm/hotFilm.wxss */
+
+.hotFilmList{
+  display: flex;
+  flex-direction: row;
+  margin: 40rpx 30rpx;
+  border: 1px solid gainsboro;
+  background-color: white;
+  height: 350rpx;
+  align-items: center;
+  justify-content: center;
+}
+.poster{
+width: 220rpx;
+margin-right: 40rpx
+}
+.detail{
+  display: flex;
+  flex-direction: column;
+  width: 370rpx;
+  height: 70%;
+  justify-content: center;
+}
+.name{
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 15rpx;
+}
+.director,
+.type{
+  font-size: 12px;
+  margin-bottom: 10rpx;
+}
