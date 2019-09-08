@@ -50,10 +50,11 @@ setList(listType){
   } else {
     db.getCommentByUser('favorite').then(res => {
       var favorite = res.data
-      console.log(favorite)
       this.favComment = []
+      console.log(res.data)
       for (var index in favorite ){
         db.getCollection('comment',favorite[index].commentId).then(res=>{
+          console.log(res.data)
           var comments = res.data
           for (var index in comments) {
             var filmId = comments[index].filmId
@@ -65,7 +66,7 @@ setList(listType){
             comments:this.favComment
           })
         })
-      
+
       }
     })
 
@@ -84,8 +85,8 @@ setList(listType){
     }else{
       this.setData({
         listType: 0,
-        style1: null,
-        style2: 'border-bottom: 2px solid rgb(137, 190, 221)'
+        style1: 'border-bottom: 2px solid rgb(137, 190, 221)',
+        style2: null
       })
       this.setList(this.data.listType)
     }
